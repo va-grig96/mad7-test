@@ -1,0 +1,23 @@
+@mixin HoverLink($default, $hover, $disabled) {
+	transition: color $transition;
+	
+	&,
+	&:active,
+	&:visited,
+	&:focus,
+	&:focus-visible {
+		color: $default !important;
+		border: none;
+	}
+
+	&:hover {
+		color: $hover !important;
+		cursor: pointer;
+	}
+
+	&._disabled {
+		color: $disabled !important;
+		pointer-events: none;
+		cursor: default;
+	}
+}
